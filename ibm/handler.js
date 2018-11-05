@@ -19,5 +19,3 @@ const hello = (params) =>
 module.exports.hello128 = hello;
 module.exports.hello256 = hello;
 module.exports.hello512 = hello;
-module.exports.hello1024 = hello;
-module.exports.hello2048 = hello;

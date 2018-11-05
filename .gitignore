@@ -6,4 +6,4 @@ jspm_packages
 .serverless
 
 package-lock.json
-client-secret.json
+key.json

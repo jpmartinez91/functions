@@ -28,21 +28,5 @@ functions:
       - http: GET /hello3
     memory: 512
 
-  hello1024:
-    handler: handler.hello1024
-    annotations:
-      web-export: true
-    events:
-      - http: GET /hello4
-    memory: 128
-
-  hello2048:
-    handler: handler.hello2048
-    annotations:
-      web-export: true
-    events:
-      - http: GET /hello5
-    memory: 2048
-
 plugins:
   - serverless-openwhisk

@@ -12,6 +12,8 @@ env:
   - PROVIDER=ibm
 before_install:
 - openssl aes-256-cbc -K $encrypted_73f9e7942726_key -iv $encrypted_73f9e7942726_iv
+  -in key.json.enc -out key.json -d
+- openssl aes-256-cbc -K $encrypted_73f9e7942726_key -iv $encrypted_73f9e7942726_iv
   -in client-secret.json.enc -out client-secret.json -d
 - sudo apt-get install libsecret-1.dev
 - npm update -g
