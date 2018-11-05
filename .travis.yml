@@ -10,6 +10,6 @@ env:
 before_install:
 - npm install -g serverless
 script:
-- cp -R functions ./$PROVIDER
+- cp -R functions $PROVIDER/
 - cd $PROVIDER
 - sls deploy
