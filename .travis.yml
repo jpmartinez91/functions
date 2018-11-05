@@ -15,4 +15,5 @@ before_install:
 script:
 - cp -R functions $PROVIDER/
 - cd $PROVIDER
+- npm i
 - sls deploy
