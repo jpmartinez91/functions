@@ -1,11 +1,15 @@
 language: node_js
 node_js: '8'
+
+cache:
+  directories:
+    - "node_modules"
 env:
   matrix:
   - PROVIDER=amazon
 before_install:
 - npm install -g serverless
 script:
-- cp functions/ ./$PROVIDER
+- cp -R functions ./$PROVIDER
 - cd $PROVIDER
 - sls deploy
