@@ -1,6 +1,8 @@
 language: node_js
 node_js: '8'
 
+sudo: required
+
 cache:
   directories:
     - node_modules
@@ -9,7 +11,7 @@ env:
   - PROVIDER=amazon
   - PROVIDER=azure
 before_install:
-- rm -rf node_modules && npm install
+- apt-get install libsecret-1.dev
 - npm update -g
 - npm install -g serverless
 script:

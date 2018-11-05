@@ -4,6 +4,10 @@ provider:
   name: aws
   runtime: nodejs8.10
 
+package:
+  exclude:
+    - node_modules
+
 functions:
   hello128:
     handler: handler.hello128
