@@ -12,7 +12,11 @@ const hello = (context, req) =>
       cpu: os.cpus(),
       address: os.networkInterfaces(),
       time_procces: process.hrtime(tload),
-      memory: os.totalmem()
+      memory: os.totalmem(),
+      free_memory: os.freemem(),
+      platform: os.platform(),
+      os_release: os.release(),
+      os_type: os.type()
     })
   };
   context.done();

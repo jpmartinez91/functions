@@ -1,4 +1,4 @@
-service: azure-nodejs
+service: tesisFunct-azure-nodejs
 
 provider:
   name: azure
@@ -7,8 +7,12 @@ provider:
 plugins:
   - serverless-azure-functions
 
+package:
+  exclude:
+    - node_modules
+
 functions:
-  hello128:
+  tesisFuncthello128:
     handler: handler.hello128
     events:
       - http: true
@@ -18,7 +22,7 @@ functions:
         x-azure-settings:
           direction: out
           name: res
-  hello256:
+  tesisFuncthello256:
     handler: handler.hello256
     events:
       - http: true
@@ -28,7 +32,7 @@ functions:
         x-azure-settings:
           direction: out
           name: res
-  hello512:
+  tesisFuncthello512:
     handler: handler.hello512
     events:
       - http: true
@@ -38,7 +42,7 @@ functions:
         x-azure-settings:
           direction: out
           name: res
-  hello1024:
+  tesisFuncthello1024:
     handler: handler.hello1024
     events:
       - http: true
@@ -48,7 +52,7 @@ functions:
         x-azure-settings:
           direction: out
           name: res
-  hello2048:
+  tesisFuncthello2048:
     handler: handler.hello2048
     events:
       - http: true
