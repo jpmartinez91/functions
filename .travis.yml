@@ -11,7 +11,7 @@ env:
   - PROVIDER=amazon
   - PROVIDER=azure
 before_install:
-- apt-get install libsecret-1.dev
+- sudo apt-get install libsecret-1.dev
 - npm update -g
 - npm install -g serverless
 script:
