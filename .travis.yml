@@ -9,8 +9,9 @@ env:
   - PROVIDER=amazon
   - PROVIDER=azure
 before_install:
+- rm -rf node_modules && npm install
 - npm update -g
-- npm install -g serverless serverless-azure-functions
+- npm install -g serverless
 script:
 - cp -R functions $PROVIDER/
 - cd $PROVIDER
