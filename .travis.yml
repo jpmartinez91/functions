@@ -10,9 +10,8 @@ env:
   - PROVIDER=azure
 before_install:
 - npm update -g
-- npm install -g serverless
+- npm install -g serverless serverless-azure-functions
 script:
 - cp -R functions $PROVIDER/
 - cd $PROVIDER
-- npm i
 - sls deploy
