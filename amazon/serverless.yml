@@ -6,7 +6,7 @@ provider:
 
 functions:
   hello128:
-    handler: handle-aws.hello128
+    handler: handler.hello128
     events:
       - http:
           path: hello1
@@ -14,7 +14,7 @@ functions:
     memorySize: 128
 
   hello256:
-    handler: handle-aws.hello256
+    handler: handler.hello256
     events:
       - http:
           path: hello2
@@ -22,7 +22,7 @@ functions:
     memorySize: 256
 
   hello1512:
-    handler: handle-aws.hello512
+    handler: handler.hello512
     events:
       - http:
           path: hello3
@@ -30,7 +30,7 @@ functions:
     memorySize: 512
 
   hello1024:
-    handler: handle-aws.hello1024
+    handler: handler.hello1024
     events:
       - http:
           path: hello4
@@ -38,7 +38,7 @@ functions:
     memorySize: 1024
     
   hello2048:
-    handler: handle-aws.hello2048
+    handler: handler.hello2048
     events:
       - http:
           path: hello5
