@@ -9,38 +9,38 @@ functions:
     handler: handler-aws.hello128
     events:
       - http:
-        path: hello1
-        method: get
+          path: hello1
+          method: get
     memorySize: 128
 
   hello256:
     handler: handler-aws.hello256
     events:
       - http:
-        path: hello2
-        method: get
+          path: hello2
+          method: get
     memorySize: 256
 
   hello1512:
     handler: handler-aws.hello512
     events:
       - http:
-        path: hello3
-        method: get
+          path: hello3
+          method: get
     memorySize: 512
 
   hello1024:
     handler: handler-aws.hello1024
     events:
       - http:
-        path: hello4
-        method: get
+          path: hello4
+          method: get
     memorySize: 1024
     
   hello2048:
     handler: handler-aws.hello2048
     events:
       - http:
-        path: hello5
-        method: get
+          path: hello5
+          method: get
     memorySize: 2048
