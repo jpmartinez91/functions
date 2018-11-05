@@ -1,28 +1,48 @@
-# Welcome to Serverless!
-#
-# This file is the main config file for your service.
-# It's very minimal at this point and uses default values.
-# You can always add more config options for more control.
-# We've included some commented out config examples here.
-# Just uncomment any of them to get that config option.
-#
-# For full config options, check the docs:
-#    docs.serverless.com
-#
-# Happy Coding!
+service: openwhisk-nodejs
 
-service: openwhisk-nodejs # NOTE: update this with your service name
-
-# Remember to install project dependencies to register the provider plugin.
-# $ npm install
 provider:
   name: openwhisk
 
 functions:
-  hello:
-    handler: handler.hello
+  hello128:
+    handler: handler.hello128
+    annotations:
+      web-export: true
+    events:
+      - http: GET /hello1
+    memory: 128
 
-# extend the framework using plugins listed here:
-# https://github.com/serverless/plugins
+  hello256:
+    handler: handler.hello256
+    annotations:
+      web-export: true
+    events:
+      - http: GET /hello2
+    memory: 256
+
+  hello512:
+    handler: handler.hello512
+    annotations:
+      web-export: true
+    events:
+      - http: GET /hello3
+    memory: 512
+
+  hello1024:
+    handler: handler.hello1024
+    annotations:
+      web-export: true
+    events:
+      - http: GET /hello4
+    memory: 128
+
+  hello2048:
+    handler: handler.hello2048
+    annotations:
+      web-export: true
+    events:
+      - http: GET /hello5
+    memory: 2048
+
 plugins:
   - serverless-openwhisk
