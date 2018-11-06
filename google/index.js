@@ -3,6 +3,7 @@ const os = require("os")
 
 const hello = (request, response) =>
 {
+  let cpu_start = process.cpuUsage();
   let time_init = new Date().getTime();
   response.status(200).send({
     platform: {

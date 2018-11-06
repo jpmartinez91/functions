@@ -5,6 +5,7 @@ const tload = process.hrtime();
 
 const hello = (event, context, callback) =>
 {
+    let cpu_start = process.cpuUsage();
     let time_init = new Date().getTime();
     callback(null, {
         statusCode: 200,

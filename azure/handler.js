@@ -1,10 +1,10 @@
 'use strict';
 
 const os = require("os")
-const tload = process.hrtime();
 
 const hello = (context, req) =>
 {
+  let cpu_start = process.cpuUsage();
   let time_init = new Date().getTime();
   context.res = {
     status: 200, /* Defaults to 200 */
