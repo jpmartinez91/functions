@@ -8,15 +8,29 @@ const hello = (context, req) =>
   context.res = {
     status: 200, /* Defaults to 200 */
     body: JSON.stringify({
-      time: new Date().getTime(),
-      cpu: os.cpus(),
-      address: os.networkInterfaces(),
-      time_procces: process.hrtime(tload),
-      memory: os.totalmem(),
-      free_memory: os.freemem(),
-      platform: os.platform(),
-      os_release: os.release(),
-      os_type: os.type()
+      platform: {
+        cpu: {
+          descriptions: os.cpus(),
+          usage: {
+            start: cpu_start,
+            end: process.cpuUsage(cpu_start)
+          }
+        },
+        memory: {
+          total: os.totalmem(),
+          usage: process.memoryUsage,
+          free: os.freemem()
+        },
+        os: {
+          type: os.type(),
+          release: os.release()
+        },
+        address: os.networkInterfaces(),
+      },
+      time: {
+        init: time_init,
+        end: new Date.getTime()
+      }
     })
   };
   context.done();

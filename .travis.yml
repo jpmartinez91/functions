@@ -1,9 +1,7 @@
 language: node_js
 node_js: '8'
 sudo: required
-cache:
-  directories:
-  - node_modules
+
 env:
   matrix:
   - PROVIDER=amazon
@@ -16,8 +14,14 @@ before_install:
 - sudo apt-get install libsecret-1.dev
 - npm update -g
 - npm install -g serverless
+
+
 script:
 - cp -R functions $PROVIDER/
 - cd $PROVIDER
 - npm i
 - sls deploy
+
+cache:
+  directories:
+  - node_modules
