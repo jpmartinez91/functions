@@ -26,7 +26,7 @@ const hello = (params) =>
     },
     time: {
       init: time_init,
-      end: new Date.getTime()
+      end: new Date().getTime()
     }
   }
 }

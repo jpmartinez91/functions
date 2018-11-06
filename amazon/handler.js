@@ -5,6 +5,7 @@ const tload = process.hrtime();
 
 const hello = (event, context, callback) =>
 {
+    let time_init = new Date().getTime();
     callback(null, {
         statusCode: 200,
         headers: {
@@ -32,7 +33,7 @@ const hello = (event, context, callback) =>
             },
             time: {
                 init: time_init,
-                end: new Date.getTime()
+                end: new Date().getTime()
             }
         })
     })

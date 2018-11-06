@@ -5,6 +5,7 @@ const tload = process.hrtime();
 
 const hello = (context, req) =>
 {
+  let time_init = new Date().getTime();
   context.res = {
     status: 200, /* Defaults to 200 */
     body: JSON.stringify({
@@ -29,7 +30,7 @@ const hello = (context, req) =>
       },
       time: {
         init: time_init,
-        end: new Date.getTime()
+        end: new Date().getTime()
       }
     })
   };

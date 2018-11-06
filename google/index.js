@@ -3,7 +3,7 @@ const os = require("os")
 
 const hello = (request, response) =>
 {
-
+  let time_init = new Date().getTime();
   response.status(200).send({
     platform: {
       cpu: {
@@ -26,7 +26,7 @@ const hello = (request, response) =>
     },
     time: {
       init: time_init,
-      end: new Date.getTime()
+      end: new Date().getTime()
     }
   });
 };
