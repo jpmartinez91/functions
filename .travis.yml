@@ -15,7 +15,7 @@ before_install:
   -in key.json.enc -out key.json -d
 # - sudo apt-get install libsecret-1.dev
 # - npm update -g
-# - npm install -g serverless
+- npm install -g serverless
 script:
 - cp -R functions $PROVIDER/
 - cd $PROVIDER
