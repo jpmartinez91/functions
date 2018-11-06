@@ -1,5 +1,7 @@
 'use strict';
 const os = require("os")
+const metrics = require('openwhisk-metrics')
+
 const tload = process.hrtime();
 const hello = (params) =>
 {
@@ -16,6 +18,6 @@ const hello = (params) =>
   }
 }
 
-module.exports.hello128 = hello;
-module.exports.hello256 = hello;
-module.exports.hello512 = hello;
+module.exports.hello128 = metrics(hello);
+module.exports.hello256 = metrics(hello);
+module.exports.hello512 = metrics(hello);
