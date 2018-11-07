@@ -6,9 +6,11 @@ provider:
 
 package:
   exclude:
-    - node_modules
+    - .gitignore
+    - .git/**
 
 functions:
+# Hello
   hello128:
     handler: handler.hello128
     events:
@@ -16,7 +18,7 @@ functions:
           path: hello1
           method: get
     memorySize: 128
-
+    # end function
   hello256:
     handler: handler.hello256
     events:
@@ -24,7 +26,7 @@ functions:
           path: hello2
           method: get
     memorySize: 256
-
+    # end function
   hello1512:
     handler: handler.hello512
     events:
@@ -32,7 +34,7 @@ functions:
           path: hello3
           method: get
     memorySize: 512
-
+    # end function
   hello1024:
     handler: handler.hello1024
     events:
@@ -40,7 +42,7 @@ functions:
           path: hello4
           method: get
     memorySize: 1024
-    
+    # end function
   hello2048:
     handler: handler.hello2048
     events:
@@ -48,3 +50,45 @@ functions:
           path: hello5
           method: get
     memorySize: 2048
+    # end function
+# Fft
+  fft128:
+    handler: handler.fft128
+    events:
+      - http:
+          path: fft1
+          method: get
+    memorySize: 128
+    # end function
+  fft256:
+    handler: handler.fft256
+    events:
+      - http:
+          path: fft2
+          method: get
+    memorySize: 256
+    # end function
+  fft512:
+    handler: handler.fft512
+    events:
+      - http:
+          path: fft3
+          method: get
+    memorySize: 512
+    # end function
+  fft1024:
+    handler: handler.fft1024
+    events:
+      - http:
+          path: fft4
+          method: get
+    memorySize: 1024
+    # end function
+  fft2048:
+    handler: handler.fft2048
+    events:
+      - http:
+          path: fft5
+          method: get
+    memorySize: 2048
+    # end function

@@ -11,33 +11,70 @@ plugins:
 
 package:
   exclude:
-    - node_modules/**
+    - node_modules/serverless-google-cloudfunctions/**
     - .gitignore
     - .git/**
 
 functions:
+# Hello
   hello128:
     handler: hello128
     events:
       - http: path
     memorySize: 128
+    # End function
   hello256:
     handler: hello256
     events:
       - http: path
     memorySize: 256
+    # End function
   hello512:
     handler: hello512
     events:
       - http: path
     memorySize: 512
+    # End function
   hello1024:
     handler: hello1024
     events:
       - http: path
     memorySize: 1024
+    # End function
   hello2048:
     handler: hello2048
     events:
       - http: path
     memorySize: 2048
+    # End function
+# Fft 
+  fft128:
+    handler: fft128
+    events:
+      - http: path
+    memorySize: 128
+    # End function
+  fft256:
+    handler: fft256
+    events:
+      - http: path
+    memorySize: 256
+    # End function
+  fft512:
+    handler: fft512
+    events:
+      - http: path
+    memorySize: 512
+    # End function
+  fft1024:
+    handler: fft1024
+    events:
+      - http: path
+    memorySize: 1024
+    # End function
+  fft2048:
+    handler: fft2048
+    events:
+      - http: path
+    memorySize: 2048
+    # End function

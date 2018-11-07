@@ -3,7 +3,15 @@ service: openwhisk-nodejs
 provider:
   name: openwhisk
 
+package:
+  exclude:
+    - node_modules/serverless-openwhisk/**
+    - .gitignore
+    - .git/**
+
+
 functions:
+# Hello
   hello128:
     handler: handler.hello128
     annotations:
@@ -11,7 +19,7 @@ functions:
     events:
       - http: GET /hello1
     memory: 128
-
+    # End function
   hello256:
     handler: handler.hello256
     annotations:
@@ -19,7 +27,7 @@ functions:
     events:
       - http: GET /hello2
     memory: 256
-
+    # End function
   hello512:
     handler: handler.hello512
     annotations:
@@ -27,6 +35,32 @@ functions:
     events:
       - http: GET /hello3
     memory: 512
-
+    # End function
+# Fft
+# Hello
+  fft128:
+    handler: handler.fft128
+    annotations:
+      web-export: true
+    events:
+      - http: GET /fft1
+    memory: 128
+    # End function
+  fft256:
+    handler: handler.fft256
+    annotations:
+      web-export: true
+    events:
+      - http: GET /fft2
+    memory: 256
+    # End function
+  fft512:
+    handler: handler.fft512
+    annotations:
+      web-export: true
+    events:
+      - http: GET /fft3
+    memory: 512
+    # End function
 plugins:
   - serverless-openwhisk

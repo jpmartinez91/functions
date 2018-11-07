@@ -9,9 +9,13 @@ plugins:
 
 package:
   exclude:
-    - node_modules
+    - node_modules/serverless-azure-functions/**
+    - .gitignore
+    - .git/**
+
 
 functions:
+# hello functions
   tesisFuncthello128:
     handler: handler.hello128
     events:
@@ -22,6 +26,7 @@ functions:
         x-azure-settings:
           direction: out
           name: res
+          # End function
   tesisFuncthello256:
     handler: handler.hello256
     events:
@@ -32,6 +37,7 @@ functions:
         x-azure-settings:
           direction: out
           name: res
+          # End function
   tesisFuncthello512:
     handler: handler.hello512
     events:
@@ -42,6 +48,7 @@ functions:
         x-azure-settings:
           direction: out
           name: res
+          # End function
   tesisFuncthello1024:
     handler: handler.hello1024
     events:
@@ -52,6 +59,7 @@ functions:
         x-azure-settings:
           direction: out
           name: res
+          # End function
   tesisFuncthello2048:
     handler: handler.hello2048
     events:
@@ -62,15 +70,59 @@ functions:
         x-azure-settings:
           direction: out
           name: res
-    
-
-# The following are a few examples of other events you can configure:
-#
-# events:
-#   - queue: YourQueueName
-#     x-azure-settings:
-#       connection : StorageAppSettingName
-#   - blob:
-#     x-azure-settings:
-#       name: bindingName
-#       direction: in
+          # End function
+# fft functions
+  tesisFunctfft128:
+    handler: handler.fft128
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel : anonymous
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: res
+  tesisFunctfft256:
+    handler: handler.fft256
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel : anonymous
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: res
+          # End function
+  tesisFunctfft512:
+    handler: handler.fft512
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel : anonymous
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: res
+          # End function
+  tesisFunctfft1024:
+    handler: handler.fft1024
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel : anonymous
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: res
+          # End function
+  tesisFunctfft2048:
+    handler: handler.fft2048
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel : anonymous
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: res
+          # End function

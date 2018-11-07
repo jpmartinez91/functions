@@ -1,0 +1,13 @@
+{
+  "name": "aws-nodejs",
+  "version": "1.0.0",
+  "description": "aws",
+  "main": "handler.js",
+  "keywords": [
+    "aws",
+    "serverless"
+  ],
+  "dependencies": {
+    "fft-js": "0.0.11"
+  }
+}

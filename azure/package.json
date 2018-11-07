@@ -9,5 +9,8 @@
   ],
   "devDependencies": {
     "serverless-azure-functions": "*"
+  },
+  "dependencies": {
+    "fft-js": "0.0.11"
   }
 }
