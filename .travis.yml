@@ -21,6 +21,7 @@ env:
 script:
   - sudo cp -R functions $PROVIDER/
   - echo $BUILD_DIR
+  - ls
   - cd $PROVIDER
   - ls
   - cd $BUILD_DIR
