@@ -12,15 +12,14 @@ before_install:
 matrix:
   - PROVIDER=amazon
   # - PROVIDER=amazon/python
-  # - PROVIDER=azure
+  - PROVIDER=azure
   # - PROVIDER=google
   # - PROVIDER=ibm
 env:
   - BUILD_DIR=node
   - BUILD_DIR=python
 script:
-  - sudo cp -R functions $PROVIDER/
-  - echo $BUILD_DIR
+  - sudo cp -R functions $PROVIDER/$BUILD_DIR
   - ls
   - cd $PROVIDER
   - ls
