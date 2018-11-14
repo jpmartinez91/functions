@@ -20,7 +20,10 @@ env:
   - BUILD_DIR=python
 script:
   - sudo cp -R functions $PROVIDER/
-  - cd $PROVIDER/$BUILD_DIR/
+  - echo $BUILD_DIR
+  - cd $PROVIDER
+  - ls
+  - cd $BUILD_DIR
   - npm i
   - sls deploy
 
