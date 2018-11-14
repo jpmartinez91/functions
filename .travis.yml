@@ -10,20 +10,15 @@ before_install:
 - npm install -g serverless 
 
 matrix:
-  - PROVIDER=amazon
-  # - PROVIDER=amazon/python
-  - PROVIDER=azure
+  - PROVIDER=amazon-math
+  - PROVIDER=amazon-ml
+  - PROVIDER=ibm-math
+  - PROVIDER=ibm-ml
   # - PROVIDER=google
   # - PROVIDER=ibm
-env:
-  - BUILD_DIR=node
-  - BUILD_DIR=python
 script:
-  - sudo cp -R functions $PROVIDER/$BUILD_DIR
-  - ls
+  - cp -R functions $PROVIDER/
   - cd $PROVIDER
-  - ls
-  - cd $BUILD_DIR
   - npm i
   - sls deploy
 

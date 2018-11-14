@@ -1,7 +1,4 @@
-
-
 import json
-# import predict
 import sys
 import os
 try:

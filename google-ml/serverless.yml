@@ -1,0 +1,27 @@
+service: gcf-python
+
+provider:
+  name: google
+  runtime: python3.7
+  project: tesis-gcl
+  credentials: ../key.json
+
+plugins:
+  - serverless-google-cloudfunctions
+
+
+package:
+  exclude:
+    - node_modules/serverless-google-cloudfunctions/**
+    - .gitignore
+    - .git/**
+    
+functions:
+  hellopy:
+    handler: hello_world
+    events:
+    - http: path
+    memorySize: 128
+
+# extend the framework using plugins listed here:
+# https://github.com/serverless/plugins
