@@ -16,7 +16,9 @@ package:
     - .git/**
 
 functions:
-# Hello
+##
+# ================  Hello ================ #
+##
   hello128:
     handler: hello128
     events:
@@ -47,34 +49,41 @@ functions:
       - http: path
     memorySize: 2048
     # End function
-# Fft 
+##
+# ================  Fft ================ #
+##
   fft128:
     handler: fft128
     events:
       - http: path
     memorySize: 128
+    timeout: 540s
     # End function
   fft256:
     handler: fft256
     events:
       - http: path
     memorySize: 256
+    timeout: 540s
     # End function
   fft512:
     handler: fft512
     events:
       - http: path
     memorySize: 512
+    timeout: 540s
     # End function
   fft1024:
     handler: fft1024
     events:
       - http: path
     memorySize: 1024
+    timeout: 540s
     # End function
   fft2048:
     handler: fft2048
     events:
       - http: path
     memorySize: 2048
+    timeout: 540s
     # End function

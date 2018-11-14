@@ -17,9 +17,9 @@ var/
 .installed.cfg
 *.egg
 
-node_modules
-key.json
-.vscode/
-
 # Serverless directories
 .serverless
+
+# Node
+node_modules
+package-lock.json 

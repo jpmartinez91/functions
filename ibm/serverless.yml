@@ -11,7 +11,9 @@ package:
 
 
 functions:
-# Hello
+##
+# ================  Hello ================ #
+##
   hello128:
     handler: handler.hello128
     annotations:
@@ -36,8 +38,9 @@ functions:
       - http: GET /hello3
     memory: 512
     # End function
-# Fft
-# Hello
+##
+# ================  Fft ================ #
+##
   fft128:
     handler: handler.fft128
     annotations:

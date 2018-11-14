@@ -15,7 +15,9 @@ package:
 
 
 functions:
-# hello functions
+##
+# ================  Hello ================ #
+##
   tesisFuncthello128:
     handler: handler.hello128
     events:
@@ -71,7 +73,9 @@ functions:
           direction: out
           name: res
           # End function
-# fft functions
+##
+# ================  Fft ================ #
+##
   tesisFunctfft128:
     handler: handler.fft128
     events:

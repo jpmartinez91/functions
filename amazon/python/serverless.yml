@@ -1,0 +1,32 @@
+service: aws-python
+
+provider:
+  name: aws
+  runtime: python2.7
+
+package:
+  exclude: 
+    - node_modules
+    - requirements.txt
+    - Readme.md
+    - .gitignore
+    - package.json
+
+plugins:
+  - serverless-offline-python
+  - serverless-python-requirements
+
+
+custom:
+  pythonRequirements:
+    zip: true
+
+functions:
+  ML:
+    handler: handler.mxnet
+    events:
+      - http:
+          path: /
+          method: get
+    memorySize: 1024
+    timeout: 900

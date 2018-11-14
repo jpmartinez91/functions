@@ -8,9 +8,13 @@ package:
   exclude:
     - .gitignore
     - .git/**
+    - package.json
+    - "*.py"
 
 functions:
-# Hello
+##
+# ================  Hello ================ #
+##
   hello128:
     handler: handler.hello128
     events:
@@ -51,7 +55,9 @@ functions:
           method: get
     memorySize: 2048
     # end function
-# Fft
+##
+# ================  Fft ================ #
+##
   fft128:
     handler: handler.fft128
     events:
@@ -59,6 +65,7 @@ functions:
           path: fft1
           method: get
     memorySize: 128
+    timeout: 540
     # end function
   fft256:
     handler: handler.fft256
@@ -67,6 +74,7 @@ functions:
           path: fft2
           method: get
     memorySize: 256
+    timeout: 540
     # end function
   fft512:
     handler: handler.fft512
@@ -75,6 +83,7 @@ functions:
           path: fft3
           method: get
     memorySize: 512
+    timeout: 540
     # end function
   fft1024:
     handler: handler.fft1024
@@ -83,6 +92,7 @@ functions:
           path: fft4
           method: get
     memorySize: 1024
+    timeout: 540
     # end function
   fft2048:
     handler: handler.fft2048
@@ -91,4 +101,5 @@ functions:
           path: fft5
           method: get
     memorySize: 2048
+    timeout: 540
     # end function
