@@ -9,14 +9,6 @@ before_install:
 - npm update -g
 - npm install -g serverless
 
-env:
-  - amazon
-  - azure
-  - ibm
-  - google
-
-
-
 matrix:
   - PROVIDER=amazon/node
   - PROVIDER=amazon/python
