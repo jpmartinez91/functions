@@ -15,14 +15,14 @@ matrix:
   # - PROVIDER=azure
   # - PROVIDER=google
   # - PROVIDER=ibm
-# env:
-#   - BUILD_DIR=node
-#   - BUILD_DIR=python
+env:
+  - BUILD_DIR=node
+  - BUILD_DIR=python
 script:
   - sudo cp -R functions $PROVIDER/
-  # - cd $PROVIDER/$BUILD_DIR/
-  # - npm i
-  # - sls deploy
+  - cd $PROVIDER/$BUILD_DIR/
+  - npm i
+  - sls deploy
 
 cache:
   directories:
