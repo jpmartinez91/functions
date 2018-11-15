@@ -17,8 +17,9 @@ matrix:
   # - PROVIDER=google
   # - PROVIDER=ibm
 script:
-  - cp -R functions $PROVIDER/
+  - sudo cp -R functions $PROVIDER/
   - cd $PROVIDER
+  - ls
   - npm i
   - sls deploy
 
