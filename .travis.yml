@@ -9,15 +9,16 @@ before_install:
 - npm update -g
 - npm install -g serverless 
 
-matrix:
-  - PROVIDER=amazon-math
-  - PROVIDER=amazon-ml
-  - PROVIDER=ibm-math
-  - PROVIDER=ibm-ml
+env:
+  matrix:
+    - PROVIDER=amazon-math
+    - PROVIDER=amazon-ml
+    - PROVIDER=ibm-math
+    - PROVIDER=ibm-ml
   # - PROVIDER=google
   # - PROVIDER=ibm
 script:
-  - sudo cp -R functions $PROVIDER/
+  - cp -R functions $PROVIDER/
   - cd $PROVIDER
   - ls
   - npm i
